@@ -1,0 +1,28 @@
+<div class="friend-people friends-people">
+    <div class="container">
+        <div class="row">
+            <div class="friends-container-white people-box">
+                {{ if(people.people.length == 0) { }}
+                <div class="row">
+
+                    <div class="offset-by-three six columns-nr">
+                        <div class="people text-center-position-nr">{{=globalize.formatMessage("web.nobodyHere") }}</div>
+                    </div>
+                </div>
+                {{ } else { }}
+                {{ _.each(people.people, function(man, index) {}}
+                <div class="row">
+
+                    <div class="offset-by-three six columns-nr">
+                        <div class="six columns-nr people">{{=man.name}} {{=man.surname}}</div>
+                        <button class="button-secondary make-friends" value="{{= man.id}}">
+                            {{=globalize.formatMessage("web.makeFriends") }}
+                        </button>
+                    </div>
+                </div>
+                {{ });}}
+                {{ } }}
+            </div>
+        </div>
+    </div>
+</div>

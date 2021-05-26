@@ -1,0 +1,28 @@
+<div class="container meeting">
+
+    <div class="row new-meeting">
+        <a href="#meetings/new-meeting" class="button-secondary">{{= globalize.formatMessage("website.newMeetingCreate")}}</a>
+    </div>
+
+    <div class="row friends-container-white meeting-box">
+        <div class="row row offset-by-one ten columns">
+            <h3 class="four columns">Время начала</h3>
+            <h3 class="four columns">Время окончания</h3>
+            <h3 class="four columns">Описание</h3>
+        </div>
+
+        {{_.each(meetings.meetings, function(meeting) { }}
+        <div class="row offset-by-one ten columns task">
+            <div class="four columns">
+                {{= moment(meeting.timeFrom).format("Do MMMM, h:mm")}}
+            </div>
+            <div class="four columns">
+                {{= moment(meeting.timeTo).format("Do MMMM, h:mm")}}
+            </div>
+            <div class="four columns">
+                {{=meeting.description}}
+            </div>
+        </div>
+        {{ });}}
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="friend-profile">
+    <div class="container">
+        <div class="row">
+            <article class="offset-by-six six columns friends-container-white profile">
+                <div class="row">
+                    <div class="six columns profile-field">
+                        <h4>{{= globalize.formatMessage("website.userSurname") }}</h4>
+                    </div>
+                    <div class="six columns">
+                        <h4>{{= profile.surname }}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns profile-field">
+                        <h4>{{= globalize.formatMessage("website.userName") }}</h4>
+                    </div>
+                    <div class="six columns">
+                        <h4>{{= profile.name }}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns profile-field">
+                        <h4>{{= globalize.formatMessage("website.userBirthday") }}</h4>
+                    </div>
+                    <div class="six columns">
+                        <h4>{{= profile.birthDay.dayOfMonth}}.{{= profile.birthDay.monthValue}}.{{= profile.birthDay.year}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns profile-field">
+                        <h4>{{= globalize.formatMessage("website.userEmail") }}</h4>
+                    </div>
+                    <div class="six columns">
+                        <h4>{{= profile.email }}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns profile-field">
+                        <h4>{{= globalize.formatMessage("website.userPhoneNumber") }}</h4>
+                    </div>
+                    <div class="six columns">
+                        <h4>{{= profile.phoneNumber }}</h4>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+

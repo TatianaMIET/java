@@ -1,0 +1,24 @@
+<div class="container tasks">
+
+    <div class="row new-task">
+        <a href="#tasks/new-task" class="button-secondary">Новое задание</a>
+    </div>
+    <div class="row friends-container-white tasks-white">
+        <div class="row row offset-by-one ten columns">
+            <h3 class="four columns">Время начала</h3>
+            <h3 class="four columns">Время окончания</h3>
+            <h3 class="four columns">Описание</h3>
+        </div>
+
+        {{_.each(allTasks, function(task) { }}
+        <div class="row offset-by-one ten columns task">
+            <div class="four columns">
+                {{= moment(task.timeFrom).format("Do MMMM, h:mm")}}</div>
+            <div class="four columns">
+                {{= moment(task.timeTo).format("Do MMMM, h:mm")}}</div>
+            <div class="four columns">
+                {{=task.description}}</div>
+        </div>
+        {{ });}}
+    </div>
+</div>

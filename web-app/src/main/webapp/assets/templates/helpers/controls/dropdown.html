@@ -1,0 +1,10 @@
+<select name="{{= name }}">
+	{{ if(showSelectHelper) { }}
+	<option value="">{{= globalize.formatMessage("website.selectHelper") }}</option>
+	{{ } }}
+	{{ _.each(data, function(item) { }}
+       	<option value="{{- item[dataIdProperty] }}" {{= value == item[dataIdProperty] ? "selected='selected'" : "" }} >
+       		{{- item[dataTitleProperty] }}
+		</option>
+	{{ }); }}
+</select>

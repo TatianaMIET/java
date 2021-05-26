@@ -1,0 +1,69 @@
+//Non responsive columns
+
+.column-nr,
+.columns-nr {
+  float: left;
+  box-sizing: border-box;
+}
+
+  .column-nr,
+  .columns-nr {
+    margin-left: @column-margin;
+  }
+  .column-nr:first-child,
+  .columns-nr:first-child {
+    margin-left: 0;
+  }
+
+  .one.column-nr,
+  .one.columns-nr          { .grid-column-width(1);  }
+  .two.columns-nr          { .grid-column-width(2);  }
+  .three.columns-nr        { .grid-column-width(3);  }
+  .four.columns-nr         { .grid-column-width(4);  }
+  .five.columns-nr         { .grid-column-width(5);  }
+  .six.columns-nr          { .grid-column-width(6);  }
+  .seven.columns-nr        { .grid-column-width(7);  }
+  .eight.columns-nr        { .grid-column-width(8);  }
+  .nine.columns-nr         { .grid-column-width(9);  }
+  .ten.columns-nr          { .grid-column-width(10); }
+  .eleven.columns-nr       { .grid-column-width(11); }
+  .twelve.columns-nr       { width: 100%; margin-left: 0;  }
+
+  .one-third.column-nr     { .grid-column-width(4);  }
+  .two-thirds.column-nr    { .grid-column-width(8);  }
+
+  .one-half.column-nr      { .grid-column-width(6);  }
+
+
+  /* Offsets */
+  .offset-by-one.column-nr,
+  .offset-by-one.columns-nr       { .grid-offset-length(1);  }
+  .offset-by-two.column-nr,
+  .offset-by-two.columns-nr       { .grid-offset-length(2);  }
+  .offset-by-three.column-nr,
+  .offset-by-three.columns-nr     { .grid-offset-length(3);  }
+  .offset-by-four.column-nr,
+  .offset-by-four.columns-nr      { .grid-offset-length(4);  }
+  .offset-by-five.column-nr,
+  .offset-by-five.columns-nr      { .grid-offset-length(5);  }
+  .offset-by-six.column-nr,
+  .offset-by-six.columns-nr       { .grid-offset-length(6);  }
+  .offset-by-seven.column-nr,
+  .offset-by-seven.columns-nr     { .grid-offset-length(7);  }
+  .offset-by-eight.column-nr,
+  .offset-by-eight.columns-nr     { .grid-offset-length(8);  }
+  .offset-by-nine.column-nr,
+  .offset-by-nine.columns-nr      { .grid-offset-length(9);  }
+  .offset-by-ten.column-nr,
+  .offset-by-ten.columns-nr       { .grid-offset-length(10); }
+  .offset-by-eleven.column-nr,
+  .offset-by-eleven.columns-nr    { .grid-offset-length(11); }
+
+
+  .offset-by-one-third.column-nr, 
+  .offset-by-one-third.columns-nr  { .grid-offset-length(4);  }
+  .offset-by-two-thirds.column-nr, 
+  .offset-by-two-thirds.columns-nr { .grid-offset-length(8);  }
+
+  .offset-by-one-half.column-nr,   
+  .offset-by-one-half.column-nr   { .grid-offset-length(6);  }

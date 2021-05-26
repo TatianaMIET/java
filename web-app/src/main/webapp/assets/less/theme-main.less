@@ -1,0 +1,268 @@
+@import "font.less";
+@import "libs/skeleton.less";
+@import "libs/skeleton-nr.less";
+@import "libs/dialog.less";
+@import "libs/pikaday.less";
+@import "libs/switch.less";
+@import "libs/select2.less";
+@import "login.less";
+@import "main-menu.less";
+@import "selfcare.less";
+@import "support.less";
+@import "libs/rangeslider.less";
+@import "my-profile.less";
+@import "people.less";
+@import "friends.less";
+@import "tasks.less";
+@import "meeting.less";
+
+/**
+ * Переопределения из skeleton.
+ */
+
+@bp-larger-than-mobile: 350px;
+@bp-larger-than-mobile-less: (@bp-larger-than-mobile - 1px);
+@bp-larger-than-mobile2: 400px;
+@bp-larger-than-mobile2-less: (@bp-larger-than-mobile2 - 1px);
+@bp-larger-than-phablet: 700px;
+@bp-larger-than-phablet-less: (@bp-larger-than-phablet - 1px);
+@column-margin: 2%;
+@primary-color: #4db2ff;
+@link-color: #4db2ff;
+@container-width: 960px;
+@container-width-less: (@container-width - 1px);
+@column-width: 100% / @total-columns;
+@global-radius: 4px;
+@font-family: "Gotham Pro", Arial, sans-serif;
+@container-width-larger-than-phablet: 100%;
+@default-input-height: 60px;
+@default-input-font-size: 24px;
+@default-button-font-size: 16px;
+@default-placeholder-font-size: 16px;
+@default-label-color: #818592;
+@friends-font-size: 16px;
+@transition-default-time: 0.6s;
+
+/**
+ * Общие параметры.
+ */
+.friends-transition-mixin {
+  -webkit-transition: @transition-default-time;
+  -moz-transition: @transition-default-time;
+  -o-transition: @transition-default-time;
+  transition: @transition-default-time;
+}
+
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    margin: 10px 0px;
+    line-height: @default-input-height;
+    height: 69px; //ie fix
+    padding: 0px 20px;
+    font-size: @default-input-font-size;
+  }
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  margin: 10px 0px;
+  padding: 0px 10px; //Замечание "При сужении браузера едет верстка кнопки «Оплатить  …   Р»"
+  height: @default-input-height;
+  font-size: @default-button-font-size;
+  .friends-transition-mixin;
+}
+
+a {
+  .friends-transition-mixin;
+}
+
+/**
+* Placeholder
+*/
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: @default-placeholder-font-size;
+  color: @default-label-color;
+}
+::-moz-placeholder {
+  text-align: center;
+  font-size: @default-placeholder-font-size;
+  color: @default-label-color;
+}
+:-moz-placeholder {
+  text-align: center;
+  font-size: @default-placeholder-font-size;
+  color: @default-label-color;
+}
+:-ms-input-placeholder {
+  text-align: center !important;
+  font-size: @default-placeholder-font-size !important;
+  color: @default-label-color !important;
+}
+::placeholder {
+  text-align: center;
+  font-size: @default-placeholder-font-size;
+  color: @default-label-color;
+}
+
+/* Скрытые элементы */
+.hidden {
+  display: none;
+}
+
+.btn-slim-grayed {
+  height: 30px;
+  border-radius: 4px;
+  background-color: #818592;
+  border: solid 1px #818592;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: white;
+  margin: 0px;
+  &:hover,
+  &:focus {
+    color: #eee;
+    border-color: #eee;
+    outline: 0;
+  }
+}
+
+/**
+ * Отображение прогресса загрузки.
+ */
+
+.friends-loading-spinner {
+  background: url(../img/loader.gif) center no-repeat;
+  min-height: 100px;
+  &.friends-loading-spinner-over {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: -50px 0 0 -50px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    border: 1px solid #d4d4d4;
+    z-index: 10000;
+  }
+}
+
+.u-pull-right-dt {
+  @media (min-width: @bp-larger-than-phablet) {
+    float: right;
+  }
+}
+
+.text-right-position {
+  @media (min-width: @bp-larger-than-phablet) {
+    text-align: right;
+  }
+  text-align: center;
+}
+
+.text-center-position-nr {
+  text-align: center;
+}
+
+/**
+ * Button secondary
+ */
+
+.button.button-secondary,
+button.button-secondary {
+  color: @primary-color;
+  background-color: #fff;
+  border-color: @primary-color;
+}
+
+input {
+  &[type="submit"].button-secondary,
+  &[type="reset"].button-secondary,
+  &[type="button"].button-secondary {
+    color: @primary-color;
+    background-color: #fff;
+    border-color: @primary-color;
+  }
+}
+
+.button.button-secondary:hover,
+button.button-secondary:hover {
+  color: @link-color;
+  background-color: #fff;
+  border-color: @link-color;
+}
+
+input {
+  &[type="submit"].button-secondary:hover,
+  &[type="reset"].button-secondary:hover,
+  &[type="button"].button-secondary:hover {
+    color: @link-color;
+    background-color: #fff;
+    border-color: @link-color;
+  }
+}
+
+.button.button-secondary:focus,
+button.button-secondary:focus {
+  color: @link-color;
+  background-color: #fff;
+  border-color: @link-color;
+}
+
+input {
+  &[type="submit"].button-secondary:focus,
+  &[type="reset"].button-secondary:focus,
+  &[type="button"].button-secondary:focus {
+    color: @link-color;
+    background-color: #fff;
+    border-color: @link-color;
+  }
+}
+
+.full-width-mobile {
+  @media (max-width: @bp-larger-than-phablet-less) {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.button-wide {
+  @media (min-width: @bp-larger-than-mobile) {
+    min-width: 320px;
+  }
+}
+
+.b-show-mobile-only {
+  display: none;
+  @media (max-width: @bp-larger-than-phablet-less) {
+    display: block;
+  }
+}
+
+.ib-show-mobile-only {
+  display: none !important;
+  @media (max-width: @bp-larger-than-phablet-less) {
+    display: inline-block !important;
+  }
+}
+
+.ib-hide-mobile-only {
+  display: inline-block;
+  @media (max-width: @bp-larger-than-phablet-less) {
+    display: none;
+  }
+}

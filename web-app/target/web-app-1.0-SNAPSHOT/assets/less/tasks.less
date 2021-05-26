@@ -1,0 +1,69 @@
+@primary-color: #df3b3b;
+
+.tasks {
+
+  a {
+    padding: 15px 20px 15px 20px;
+    text-decoration: none;
+  }
+
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .tasks-white {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .task {
+    font-size: 15px;
+  }
+
+  .new-task {
+    text-align: right;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+  .button-secondary {
+    color: @primary-color;
+    background-color: #fff;
+    border-color: @primary-color;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+  }
+}
+
+.new-tasks{
+
+  button{
+    width: 45%;
+  }
+
+  .description {
+    textarea {
+      width: 90%;
+      height: 200px;
+      @media (max-width: 630px) {
+        width: 80%;
+        height: 69px;
+      }
+    }
+  }
+
+    .data {
+      input[type="text"] {
+        width: 80%;
+      }
+
+    }
+
+
+}

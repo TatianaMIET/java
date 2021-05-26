@@ -1,0 +1,148 @@
+<div class="friends-support-container">
+
+	<div class="friends-container-bottom-fem">
+		<div class=container>
+			<div class="friends-support-header">
+				<div class="row friends-margined-row">
+					<div class="twelve columns">
+						<a href="" class="">
+							<article class="friends-support-header-content friends-gray-bordered-container">
+								<h2>{{= globalize.formatMessage("website.supportTitle") }}</h2>
+							</article>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="friends-container-white friends-container-top-ml friends-support-pad">
+		<div class="container">
+			<article>
+				<div class="friends-acticle-content" id="create-process">
+					<h3>{{= globalize.formatMessage("website.messageTitle") }}</h3>
+					<form>
+						<div class="row">
+							<div class="twelve columns">
+								<select class="u-full-width" id="exampleRecipientInput" name="subthemeId">
+									{{ _.each(processThemes, function(theme, index) { }}
+									<option value="{{= theme.subthemeId }}"> {{= theme.subthemeName }}</option>
+									{{ }); }}
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="twelve columns">
+								<textarea class="friends-support-message-input" name="comment" placeholder="{{= globalize.formatMessage("website.enterText") }}"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="friends-align-left-d">
+								<div class="one column">
+									<img id="uploadFile" src="{{=app.urlPrefix}}/assets/img/icon-attach.png" alt="">
+									<input id="inputFileContent" type="file" style="display: none;"/>
+									<img id="deleteFile" src="{{=app.urlPrefix}}/assets/img/icon-close.png" alt="" hidden="true">
+								</div>
+								<div id="file-name" class="three columns friends-file-name"></div>
+							</div>
+
+							<div class="eight columns friends-align-right-d">
+								<button class="button-primary button-wide full-width-mobile">{{= globalize.formatMessage("website.btnSend") }}</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</article>
+		</div>
+	</div>
+
+	<div class="container friends-support-pad">
+		<div class="friends-support-history">
+			<div class="row">
+				<div class="twelve columns">
+					<h3>{{= globalize.formatMessage("website.supportHistoryTitle") }}</h3>
+					<table class="u-full-width friends-table-headless">
+						<thead class="u-header-borderless-text">
+						<tr>
+							<td>{{= globalize.formatMessage("website.supportHistoryNumColumn") }}</td>
+							<td>{{= globalize.formatMessage("website.supportHistoryDateColumn") }}</td>
+							<td>{{= globalize.formatMessage("website.supportHistoryTopicColumn") }}</td>
+							<td>{{= globalize.formatMessage("website.supportHistoryStatusColumn") }}</td>
+							<td>{{= globalize.formatMessage("website.supportHistorySolvedOnColumn") }}</td>
+						</tr>
+						</thead>
+						<tbody>
+						{{ _.each(processDetails, function(process, index) { }}
+						<tr>
+							<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportHistoryNumColumn") }}</span>{{= process.number }}</td>
+							<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportHistoryDateColumn") }}</span>{{= moment(process.startDate).format(' DD.MM.YYYY') }}</td>
+							<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportHistoryTopicColumn") }}</span>{{= process.theme }}</td>
+							<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportHistoryStatusColumn") }}</span>{{= process.status }}</td>
+							<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportHistorySolvedOnColumn") }}</span>{{= moment(process.endDate).format(' DD.MM.YYYY') }}</td>
+						</tr>
+						{{ }); }}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+{{ if(officesInfo.length!==0) { }}
+	<div class="friends-container-white friends-support-pad" style="padding-bottom:0;">
+		<div class="container">
+			<div class="friends-support-offices">
+				<div class="row">
+					<div class="six columns friends-align-left-d">
+						<h3>{{= globalize.formatMessage("website.supportOfficesAddrTitle") }}</h3>
+					</div>
+					<div class="six columns friends-align-right-d">
+						<button class="button-primary" id="show-map">
+							{{= globalize.formatMessage("website.showMap") }}
+						</button>
+					</div>
+				</div>
+				<div class="row" id="list-of-offices">
+					<div class="twelve columns">
+						<table class="u-full-width friends-table-headless">
+							<thead class="u-header-borderless-text">
+							<tr>
+								<td>{{= globalize.formatMessage("website.supportOfficesAddrColumn") }}</td>
+								<td>{{= globalize.formatMessage("website.supportOfficesOpenedHoursColumn") }}</td>
+							</tr>
+							</thead>
+							<tbody>
+							{{ _.each(officesInfo, function(office, index) { }}
+							<tr>
+								<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportOfficesAddrColumn") }}</span>{{= office.address }}</td>
+								<td class=""><span class="b-show-mobile-only u-header-borderless-text">{{= globalize.formatMessage("website.supportOfficesOpenedHoursColumn") }}</span>{{= office.serviceHours }}</td>
+							</tr>
+							{{ }); }}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="friends-container-white friends-support-pad" style="padding-bottom:0;">
+		<div id="requests-map"></div>
+	</div>
+	{{ } }}
+	<div class="friends-container-white friends-support-pad">
+		<div class="container">
+			<div class="friends-support-header">
+				<div class="row friends-margined-row">
+					<div class="twelve columns">
+						<article class="friends-support-header-content friends-gray-bordered-container">
+							<!-- <span class="friends-icon-container">
+                                <img src="/friends/assets/img/icon-support.png" class="friends-icon friends-icon-support">
+                            </span>  -->
+							<h2>{{= globalize.formatMessage("website.ifYouHaveQuestions") }}</h2>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

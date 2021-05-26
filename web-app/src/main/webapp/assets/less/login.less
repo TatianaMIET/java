@@ -1,0 +1,163 @@
+@login-header-background-color: #f1f3f5;
+@login-dialog-background-color: #ffffff;
+@login-header-height: 280px;
+@full-width: 100%;
+@login-dialog-top-margin: 70px;
+@bp-larger-than-phablet-less: 549px;
+
+.friends-login-header {
+  position: absolute;
+  top: 0px;
+  width: @full-width;
+  height: @login-header-height;
+  background-color: @login-header-background-color;
+  z-index: -100;
+}
+
+.friends-login-dialog {
+  margin: @login-dialog-top-margin auto;
+  width: 640px;
+  max-width: @full-width;
+  min-height: 400px;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.1);
+  background-color: @login-dialog-background-color;
+  text-align: center;
+  padding-bottom: 34px;
+  .friends-login-logo-container {
+    .friends-logo {
+      width: 87px;
+      height: 27px;
+      margin-top: 60px;
+      object-fit: contain;
+      vertical-align: bottom;
+    }
+  }
+  h1 {
+    padding-top: 40px;
+    font-size: 24px;
+    text-align: center;
+    color: #242527;
+    font-weight: 900;
+    line-height: 60px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  button[type="submit"] {
+    width: @full-width;
+  }
+  .row.friends-row-main-action {
+    margin: 20px 0px;
+  }
+  .row.friends-row-cancel-action {
+    margin: 35px 0px 0px 0px;
+  }
+  a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+  }
+  form {
+    margin: 0px;
+    padding-bottom: 34px;
+  }
+  .friends-register-container {
+    padding: 34px 0px 0px 0px;
+    border-top: 1px solid @light-grey;
+    label {
+      font-size: 16px;
+      color: @default-label-color;
+      font-weight: normal;
+    }
+  }
+  .friends-calendar-btn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/img/icon-calendar.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    position: relative;
+    top: 5px;
+    @media (max-width: @bp-larger-than-phablet-less) {
+      & {
+        margin: 0px;
+        float: right;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .date-wrapper {
+    display: inline-block;
+    @media (max-width: @bp-larger-than-phablet-less) {
+      display: block;
+    }
+    label {
+      display: inline-block;
+      padding-right: 20px;
+      min-width: 20px;
+      @media (max-width: @bp-larger-than-phablet-less) {
+        & {
+          width: 15%;
+          padding-right: 0px;
+          display: inline-block;
+        }
+      }
+    }
+    input {
+      width: 250px;
+      text-align: center;
+      color: #818592;
+      @media (max-width: @bp-larger-than-phablet-less) {
+        & {
+          width: 85%;
+          display: inline-block;
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+  .hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .date-left{
+    text-align: left;
+  }
+  .parsley-errors-list {
+    ul {
+      margin-top: 20px;
+    }
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+.friends-select-contract-form {
+	padding-top: 50px;
+	.friends-select-contract {
+		background-color: white;
+		border: solid 1px #e8e8e8;
+	    border-radius: 4px;
+		text-align: left;
+		padding: 30px;
+		margin-bottom: 20px;			
+	}	
+}	
+
+@media (max-width: @bp-larger-than-phablet-less) {
+  .friends-login-dialog {
+    margin-top: 0px;
+    .row {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+

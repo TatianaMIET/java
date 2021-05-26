@@ -1,0 +1,89 @@
+<h1>{{= globalize.formatMessage("website.registrationPageTitle") }}</h1>
+
+<form>
+
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                <input type="text" name="name" placeholder="{{= globalize.formatMessage("website.userName") }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                <input type="text" name="surname" placeholder="{{= globalize.formatMessage("website.userSurname") }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                <input type="text" name="phoneNumber" placeholder="{{= globalize.formatMessage("website.userPhoneNumber") }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns date-left">
+                <div class="field clearfix date-range-start date-wrapper">
+                    <input data-parsley-date="true" data-date-only="true" id="details_till" name="birthDay" type="text" value="{{= moment().format('DD.MM.YYYY') }}" />
+                    <a class="friends-calendar-btn hide-text">Calendar</a>
+                    <div id="date-end-errors"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                <input type="text" name="email" placeholder="{{= globalize.formatMessage("website.login") }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns friends-has-feedback">
+                <input type="password" name="password" placeholder="{{= globalize.formatMessage("website.passwordProperty") }}">
+                <span class="friends-sprite friends-img-password-show"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+
+    <div class="friends-form-group friends-form-group-last">
+        <div class="row friends-row-main-action">
+            <div class="offset-by-three six columns">
+                <button type="submit" class="button-primary">{{= globalize.formatMessage("website.buttonRegistered") }}</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div class="friends-register-container">
+    <div class="row">
+        <div class="twelve columns">
+            <a href="#" class="friends-cancel-link">{{= globalize.formatMessage("website.getLogin") }}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "url": [
+    "https://github.com/unicode-cldr/cldr-core/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-dates-modern/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-localenames-modern/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-misc-modern/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-numbers-modern/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-segments-modern/archive/28.0.0.zip",
+    "https://github.com/unicode-cldr/cldr-units-modern/archive/28.0.0.zip"
+  ]
+}

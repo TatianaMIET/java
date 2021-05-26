@@ -1,0 +1,166 @@
+.friends-support-container {
+
+  .select2-selection__rendered,
+  .select2-selection--single,
+  .select2-container--classic,
+  .select2-selection__arrow {
+    height: 38px !important;
+    line-height: 38px !important;
+    color: #818592 !important;
+  }
+
+  .select2-selection--single,
+  .select2-results{
+    border: 1px solid #d1d1d1 !important;
+  }
+
+  .friends-support-header-content {
+    min-height: 100px;
+    text-align: center;
+
+    h2 {
+      display: inline-block;
+      font-size: 32px;
+      font-weight: 900;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #242527;
+      vertical-align: middle;
+      padding: 30px 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .friends-support-filter-dates {
+    padding: 10px 20px;
+  }
+
+  .friends-month-header {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.13;
+    letter-spacing: normal;
+    color: #242527;
+  }
+
+  .friends-support-total {
+    padding: 10px 20px;
+    @media (max-width: @bp-larger-than-phablet-less) {
+      display: block;
+      text-align: center;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  .friends-support-pad {
+    padding-bottom: 30px;
+
+    .friends-acticle-content {
+      img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .close-balloon{
+      top: 0px;
+      right: 0px;
+      position: absolute;
+      //скрытие при изменение балуна в балун-панель
+      @media (max-width: 380px) {
+        visibility: hidden;
+      }
+    }
+    .header-map{
+      width: 140px;
+      height: 20px;
+      font-family: "Gotham Pro", Arial, sans-serif;
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      color: #242527;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .body-map{
+      font-family: "Gotham Pro", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      color: #242527;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+  .friends-support-message-input {
+    min-height: 180px;
+    width: 100%;
+    resize: none;
+
+    &::-webkit-input-placeholder {
+      text-align: left;
+    }
+
+    &::-moz-placeholder {
+      text-align: left;
+    }
+
+    &:-moz-placeholder {
+      text-align: left;
+    }
+
+    &:-ms-input-placeholder {
+      text-align: left !important;
+    }
+
+    &::placeholder {
+      text-align: left;
+    }
+  }
+
+  .friends-support-header {
+    .friends-icon-container {
+      position: absolute;
+      left: 10px;
+    }
+  }
+  .friends-support-offices{
+    button {
+      height: 30px;
+      font-size: 10px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+  }
+
+}
+.friends-file-name {
+  padding: 30px 20px;
+  word-wrap: break-word;
+
+  @media (max-width: @bp-larger-than-phablet-less) {
+    display: block;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.select2-container {
+  li {
+    margin-bottom: 0 !important;
+  }
+}

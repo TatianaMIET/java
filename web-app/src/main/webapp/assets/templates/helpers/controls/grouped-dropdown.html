@@ -1,0 +1,17 @@
+<select name="{{= name }}" class="{{= className }}" >
+	{{ if(selectHelper) { }}
+	<option value="">{{= selectHelper }}</option>
+	{{ }; }}
+	{{ var grouped = _.sortBy(data, function(elem) { return elem[dataGroupProperty]; }); }}
+	{{ grouped = _.groupBy(grouped, function(elem) { return elem[dataGroupProperty]; }); }}
+	{{ _.each(grouped, function(group, index) { }}
+		<optgroup label="{{- index }}">
+		{{ var sorted = _.sortBy(group, function(elem) { return elem[dataIdProperty]; }); }}
+		{{ _.each(sorted, function(item) { }}
+        	<option value="{{- item[dataIdProperty] }}" {{= value == item[dataIdProperty] ? "selected='selected'" : "" }} >
+        		{{- item[dataTitleProperty] }}
+			</option>
+		{{ }); }}
+		</optgroup>
+	{{ }); }}
+</select>

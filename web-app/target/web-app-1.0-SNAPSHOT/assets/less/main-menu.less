@@ -1,0 +1,153 @@
+.friends-selfcare-main-menu {
+  * {
+    box-sizing: border-box;
+  }
+  .friends-logo-wrapper {
+    float: left;
+    .friends-login-logo-container {
+      .friends-logo {
+        width: 87px;
+        height: 27px;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 0%;
+  }
+  label {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  nav[role="custom-dropdown"] {
+    position: relative;
+    width: 100%;
+    padding: 27px 0px;
+    a,
+    label {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    ul {
+      padding: 0;
+      margin: 0 auto;
+      width: 100%;
+      text-align: right;
+      list-style: none;
+      > li {
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0px;
+        padding-right: 10px;
+        @media (max-width: @bp-larger-than-phablet-less) {
+          padding-right: 0px;
+        }
+        &.friends-main-tab-selected {
+          color: black;
+          font-weight: 900;
+        }
+        &:hover {
+          color: #555;
+          > a {
+            color: #555;
+          }
+        }
+        &.friends-menu-selected {
+          > a {
+            color: #242527;
+          }
+        }
+      }
+    }
+    .friends-account-actions-wrapper {
+      float: right;
+    }
+  }
+  @media (max-width: @bp-larger-than-phablet-less) {
+    html,
+    body {
+      margin: 0;
+    }
+    nav[role="custom-dropdown"] {
+      ul {
+        display: none;
+        height: 100%;
+        padding: 20px 0px;
+        li a {
+          font-size: 16px;
+          line-height: 50px;
+          letter-spacing: 0.5px;
+        }
+      }
+      label {
+        position: relative;
+        display: block;
+        width: 2.25em;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+      }
+      a {
+        font-size: 1.8em;
+        padding: 0px;
+      }
+      .friends-main-menu-right-panel a {
+        display: block;
+      }
+      label:after {
+        position: absolute;
+        left: 0.25em;
+        top: 0;
+        content: "\2261";
+        font-size: 1.8em;
+      }
+      input[type="checkbox"]:checked ~ label:after {
+        color: #222;
+      }
+      input[type="checkbox"]:checked ~ ul {
+        display: block;
+        > li {
+          width: 100%;
+          opacity: 0.8;
+          text-align: center;
+        }
+      }
+      .friends-sandwitch-wrapper {
+        width: 10%;
+        display: inline-block;
+      }
+      .friends-logo-wrapper {
+        width: 80%;
+        display: inline-block;
+        float: none;
+        position: absolute;
+        .friends-login-logo-container {
+          text-align: center;
+          padding-top: 0.4em;
+          .friends-logo {
+            display: inline;
+          }
+        }
+      }
+      .friends-account-actions-wrapper {
+        width: 10%;
+        display: inline-block;
+      }
+    }
+  }
+
+  .friends-img-menu-selector {
+    display: none;
+  }
+}

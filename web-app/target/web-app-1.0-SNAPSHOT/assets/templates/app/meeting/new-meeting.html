@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row meeting">
+        <div class="friends-container-white meeting-box">
+            <div class="row check-block">
+                <div class="four columns">
+                    {{ _.each(friendsList.friends, function(friend) {}}
+                    <div class="row check">
+                        <div>
+                            <input type="checkbox" id="{{=friend.userId}}">
+                            <label for="{{=friend.userId}}">{{=friend.surname}} {{=friend.name}}</label>
+                        </div>
+                    </div>
+                    {{ });}}
+                </div>
+                <div class="eight columns">
+                    <form>
+
+                        <div class="friends-form-group">
+                            <div class="row meeting-date">
+                                <div class="six columns date-left">
+                                    <div class="field clearfix date-range-start date-wrapper">
+                                        <input type="text" data-parsley-date="true" data-date-only="true" id="timeFromDate" name="timeFromDate"
+                                               value="{{= moment().format('DD.MM.YYYY') }}"/>
+                                        <a class="friends-calendar-btn hide-text">Calendar</a>
+                                    </div>
+                                </div>
+                                <div class="six columns">
+                                    <input type="text" time-data="true" id="timeFrom" name="timeFrom" value="{{= moment().format('LT') }}"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="friends-form-group">
+                            <div class="row meeting-date">
+                                <div class="six columns date-left">
+                                    <div class="field clearfix date-range-start date-wrapper">
+                                        <input type="text" data-parsley-date="true" data-date-only="true" id="timeToDate" name="timeToDate"
+                                               value="{{= moment().format('DD.MM.YYYY') }}"/>
+                                        <a class="friends-calendar-btn hide-text">Calendar</a>
+                                    </div>
+                                </div>
+                                <div class="six columns">
+                                    <input type="text" time-data="true" id="timeTo" name="timeTo" value="{{= moment().format('LT') }}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friends-form-group">
+                            <div class="row">
+                                <div class="twelve columns description">
+                                    <input type="text" name="description" placeholder="{{= globalize.formatMessage("website.Description") }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friends-form-group friends-form-group-last">
+                            <div class="row friends-row-main-action meeting-date">
+                                <div class="offset-by-three six columns">
+                                    <button type="submit" class="button-primary">{{= globalize.formatMessage("website.buttonAdd") }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

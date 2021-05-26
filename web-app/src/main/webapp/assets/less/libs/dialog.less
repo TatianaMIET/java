@@ -1,0 +1,176 @@
+@modal-dialog-padding-vertical: 40px;
+@modal-dialog-padding-horizontal: 40px;
+@modal-dialog-padding-middle: 20px;
+
+@modal-dialog-simple-padding-vertical: 80px;
+
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+	.modal-open .modal {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	
+.modal-dialog-simple {
+	z-index: 100;
+	//display: none;
+	//padding: 1% 6% 0% 0%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	//background-color: #00000066;
+	background-color: rgba(51, 51, 51, 0.5);
+	@media (max-width: 700px) {
+		.modal-content-simple {
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.modal-content-simple {
+	z-index: 105;
+	margin: auto;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	outline: 0;
+	width: 600px;
+	border-radius: 5px;
+	top: 30%;
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+}
+	.modal-backdrop.in {
+		opacity: 0.3;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	}
+	
+.modal-header {
+	padding: @modal-dialog-padding-vertical @modal-dialog-padding-horizontal @modal-dialog-padding-middle @modal-dialog-padding-horizontal;
+}
+	.modal-header .modal-close { 
+		float: right;
+		margin-top: -10px;
+		margin-right: -10px;
+		cursor: pointer;
+	}
+	.modal-header .modal-close:hover {
+	}
+	
+	.modal-header h4, .modal-content h4 {
+		margin: 0;
+		font-size: 18pt;
+	}
+	.modal-dialog-simple .modal-header {
+		padding: @modal-dialog-simple-padding-vertical @modal-dialog-padding-horizontal @modal-dialog-padding-middle @modal-dialog-padding-horizontal;
+		text-align: center;
+	}
+
+.modal-body {
+	position: relative;
+	padding: 0 @modal-dialog-padding-horizontal 0 @modal-dialog-padding-horizontal;
+}
+	.modal-dialog-simple .modal-body {
+		text-align: center;
+	}
+	.modal-body p {
+		margin-bottom: 0;
+	}
+
+.modal-footer {
+	.button-primary{
+		min-width: 100px;
+	}
+	padding: @modal-dialog-padding-middle @modal-dialog-padding-horizontal @modal-dialog-padding-vertical @modal-dialog-padding-horizontal;
+	text-align: left;
+}
+	.modal-footer a {
+		margin-left: 30px;
+	}
+	.modal-dialog-simple .modal-footer {
+		padding: @modal-dialog-padding-middle @modal-dialog-padding-horizontal @modal-dialog-simple-padding-vertical @modal-dialog-padding-horizontal;
+		text-align: center;
+	}
+
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+@media (min-width: @bp-larger-than-tablet) {
+	.modal-dialog.modal-dialog-small {
+		width: 500px;
+		margin: 30px auto;
+	}
+}
+
+@media (min-width: @bp-larger-than-desktop) {
+	.modal-dialog {
+		width: 700px;
+		margin: 30px auto;
+	}
+	.modal-dialog.modal-dialog-small {
+		width: 600px;
+	}
+}
+
+@media (min-width: @bp-larger-than-desktophd) {
+	.modal-dialog {
+		width: 800px;
+		margin: 30px auto;
+		margin-top: 100px;
+	}
+	.modal-dialog.modal-dialog-small {
+		margin-top: 100px;
+	}	
+}
+
+.modal-dialog-full {
+	width: 100%;
+	border-top: 2px solid @primary-color;
+}
+
+.clearfix:before,
+.clearfix:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after,
+.modal-header:after,
+.modal-footer:after {
+	clear: both;
+}
+

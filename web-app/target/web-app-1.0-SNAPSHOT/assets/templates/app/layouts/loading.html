@@ -1,0 +1,13 @@
+{{ if(!isArticle) { }}
+<section>
+{{ } }}
+	<article id="loading-message">
+		<div class="friends-loading-spinner"></div>
+	</article>
+	<article id="error-message" class="friends-error-text hidden">
+		<h3>{{= globalize.formatMessage("errorHeaderSub") }}</h3>
+		<p id="error-message-server"></p>
+	</article>
+{{ if(!isArticle) { }}
+</section>
+{{ } }}

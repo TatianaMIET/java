@@ -1,0 +1,47 @@
+<div class="friends-friends">
+    <div class="container">
+        <div class="row">
+            <div class="friends-container-white friends-box">
+                {{ if (friends.friends.length == 0) { }}
+                <div class="row">
+                    <div class="offset-by-three six columns-nr">
+                        <div class="friends text-center-position-nr">{{=
+                            globalize.formatMessage("website.startFindFriends") }}
+                        </div>
+                        {{ } else { }}
+                        {{ _.each(friends.friends, function(man, index) {}}
+                        <div class="row">
+                            <div class="offset-by-three six columns-nr">
+                                <div class="six columns-nr friends">{{=man.name}} {{=man.surname}}</div>
+
+                                {{ if(man.status == 0) { }}
+                                <div class="six columns">
+                                    <button class="button-secondary set-status" value="{{=man.status}}"
+                                            value-id="{{=man.userId}}">
+                                        {{= globalize.formatMessage("website.deleteFriend") }}
+                                    </button>
+                                </div>
+                                {{ } else if(man.status == 1) { }}
+                                <div class="six columns">
+                                    <button class="button-secondary set-status" value="{{=man.status}}"
+                                            value-id="{{=man.userId}}">
+                                        {{= globalize.formatMessage("website.deleteRequest") }}
+                                    </button>
+                                </div>
+                                {{ } else if(man.status == 2) { }}
+                                <div class="six columns">
+                                    <button class="button-secondary set-status" value="{{=man.status}}"
+                                            value-id="{{=man.userId}}">
+                                        {{= globalize.formatMessage("website.addFriend") }}
+                                    </button>
+                                </div>
+                                {{ } }}
+
+                            </div>
+                        </div>
+                        {{ });}}
+                        {{ } }}
+                    </div>
+                </div>
+            </div>
+        </div>

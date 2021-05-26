@@ -1,0 +1,54 @@
+<div class="container new-tasks">
+    <form>
+
+        <div class="friends-form-group">
+            <div class="row">
+                <div class="six columns date-left data">
+                    <div class="field clearfix date-range-start date-wrapper">
+                        <input data-parsley-date="true" data-date-only="true" id="timeFromDate"  name="timeFromDate" type="text"
+                               value="{{= moment().format('DD.MM.YYYY') }}"/>
+                        <a class="friends-calendar-btn hide-text">Calendar</a>
+                    </div>
+                </div>
+                <div class="six columns data">
+                    <input time-data="true" id="timeFrom" name="timeFrom" type="text" value="{{= moment().format('LT') }}"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="friends-form-group">
+            <div class="row data">
+                <div class="six columns date-left">
+                    <div class="field clearfix date-range-start date-wrapper">
+                        <input data-parsley-date="true" data-date-only="true" id="timeToDate" name="timeToDate" type="text"
+                               value="{{= moment().format('DD.MM.YYYY') }}"/>
+                        <a class="friends-calendar-btn hide-text">Calendar</a>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <input time-data="true" type="text" id="timeTo" name="timeTo" value="{{= moment().format('LT') }}"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="friends-form-group">
+            <div class="row">
+                <div class="twelve columns description">
+                    <textarea type="text" name="description" placeholder="{{= globalize.formatMessage("website.Description") }}"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="friends-form-group friends-form-group-last">
+            <div class="row friends-row-main-action">
+                <div class="offset-by-four six columns">
+                    <button type="submit" class="button-primary">{{= globalize.formatMessage("website.buttonAdd") }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>

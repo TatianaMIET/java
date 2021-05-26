@@ -1,0 +1,10 @@
+utils\LoggerProducer.class
+converter\Java8TimeModule$1.class
+converter\Java8TimeModule.class
+converter\Java8TimeModule$2.class
+collections\DozerUtilities.class
+utils\ObjectMapperProducer.class
+utils\EntityManagerUtil.class
+utils\ObjectMapperProvider.class
+utils\DozerProducer.class
+converter\LocalDateAttributeConverter.class

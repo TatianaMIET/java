@@ -1,0 +1,7 @@
+<p class="friends-static-text">
+	{{ if(value) { }}
+		<strong>{{- value }}</strong>&nbsp;&ndash;&nbsp;<a href="#change" class="friends-change-link {{=(_class) ? _class : ''}}">{{= globalize.formatMessage("website.changeLink") }}</a>
+	{{ } else { }}
+		<a href="#set" class="friends-set-link {{=(_class) ? _class : ''}}">{{= globalize.formatMessage("website.setLink") }}</a>
+	{{ } }}
+</p>

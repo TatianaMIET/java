@@ -1,0 +1,20 @@
+{
+    "name": "NetByNet",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "bower": "^1.7.7",
+        "grunt": "^0.4.5",
+        "grunt-bowercopy": "^1.2.4",
+        "grunt-cli": "^0.1.13",
+        "grunt-contrib-concat": "^0.5.1",
+        "grunt-contrib-cssmin": "^0.14.0",
+        "grunt-contrib-less": "^1.2.0",
+        "grunt-contrib-requirejs": "^0.4.4",
+        "grunt-modernizr": "^1.0.2",
+        "grunt-text-replace": "^0.4.0"
+    },
+    "dependencies": {
+        "cldr-data-downloader": "^0.2.3"
+    }
+}

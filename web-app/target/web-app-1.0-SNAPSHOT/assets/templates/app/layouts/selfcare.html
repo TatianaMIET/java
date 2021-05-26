@@ -1,0 +1,68 @@
+<header class="friends-selfcare-header">
+
+
+    <div class="friends-selfcare-main-menu-wrapper container">
+        <div class="friends-selfcare-main-menu">
+            <nav class="" role="custom-dropdown">
+                <div class="row">
+                    <input type="checkbox" id="main-menu-sandwitch">
+                    <label for="main-menu-sandwitch" onclick class="friends-sandwitch-wrapper"></label>
+
+                    <ul>
+                        <li class="friends-menu-dashboard">
+                            <a href="#">
+                                {{= globalize.formatMessage("website.mainMenuDashboardTitle") }}</a>
+                            <span class="friends-img-menu-selector">&nbsp;</span>
+                        </li>
+
+                        <li class="friends-menu-dashboard">
+                            <a href="#meetings">
+                                {{= globalize.formatMessage("website.mainMenuMeetingTitle") }}</a>
+                            <span class="friends-img-menu-selector">&nbsp;</span>
+                        </li>
+
+                        <li class="friends-menu-dashboard">
+                            <a href="#people">
+                                {{= globalize.formatMessage("website.mainMenuPeopleTitle") }}</a>
+                            <span class="friends-img-menu-selector">&nbsp;</span>
+                        </li>
+                        <li class="friends-menu-dashboard">
+                            <a href="#friends">
+                                {{= globalize.formatMessage("website.mainMenuFriendTitle" )}}</a>
+                            <span class="friends-img-menu-selector"> </span>
+                        </li>
+                        <li class="friends-menu-dashboard">
+                            <a href="#tasks">
+                                {{= globalize.formatMessage("website.mainMenuTaskTitle" )}}</a>
+                            <span class="friends-img-menu-selector"> </span>
+                        </li>
+
+                        <li class="friends-menu-exit">
+                            <a href="{{= app.urlPrefix}}/logout">
+                                {{= globalize.formatMessage("website.mainMenuExitTitle") }}</a>
+                            <span class="friends-img-menu-selector">&nbsp;</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="friends-selfcare-main-tabs-wrapper">
+    </div>
+</header>
+
+<div id="selfcare-wrapper">
+    <div id="main-content" class="friends-selfcare-content"></div>
+</div>
+
+<footer class="friends-selfcare-footer">
+    <div class="friends-container-white">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns text-right-position">&#169; Friends 2020 - 2020</div>
+            </div>
+        </div>
+    </div>
+</footer>
+

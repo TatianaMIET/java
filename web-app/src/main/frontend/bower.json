@@ -1,0 +1,42 @@
+{
+    "name": "nbn",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "requirejs": "2.1.22",
+        "requirejs-text": "2.0.14",
+        "requirejs-plugins": "1.0.3",
+        "jquery": "git://github.com/jquery/jquery.git#1.12.4",
+        "parsleyjs": "2.3.4",
+        "es5-shim": "4.5.5",
+        "json2-ie8": "git://github.com/douglascrockford/JSON-js.git",
+        "respond": "1.4.2",
+        "jquery.inputmask": "3.3.3",
+        "underscore": "1.8.3",
+        "backbone": "1.2.3",
+        "marionette": "2.4.4",
+        "form2js": "git://github.com/maxatwork/form2js.git",
+        "Font-Awesome": "4.5.0",
+        "globalize": "1.1.1",
+        "cldrjs": "0.4.4",
+        "cldr-data": "28.0.0",
+        "cocktail": "0.5.11",
+        "js-iso8601": "git://github.com/csnover/js-iso8601.git#1.0.0",
+        "moment":  "2.11.2",
+        "modernizr": "3.3.1",
+        "skeleton-less": "git://github.com/WhatsNewSaes/Skeleton-Less.git",
+        "normalize.css": "3.0.3",
+        "select2": "4.0.1",
+        "zxcvbn": "4.2.0",
+        "pikaday": "1.4.0",
+        "urijs": "1.17.0",
+        "ion.rangeSlider":"git://github.com/IonDen/ion.rangeSlider.git#2.1.2",
+        "rangeslider.js": "2.1.1",
+        "js-cookie": "2.1.1"
+    },
+    "devDependencies": {
+    },
+    "resolutions": {
+        "backbone": "~1.2.3"
+    }
+}

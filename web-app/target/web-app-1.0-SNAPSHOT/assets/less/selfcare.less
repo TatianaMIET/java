@@ -1,0 +1,1200 @@
+@friends-main-menu-background: #ffffff;
+@friends-background-color: #f1f3f5;
+
+.friends-layout-selfcare {
+	background-color: @friends-background-color;
+	.friends-selfcare-header {
+		background-color: @friends-main-menu-background;
+	}
+	@media (min-width: @bp-larger-than-phablet)
+	{
+		#selfcare-wrapper, .friends-selfcare-header, .friends-selfcare-footer {
+			.container {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+	#top-banner-place {
+	    min-height: 75px;
+    	border-top: 1px solid #EEE;
+    	margin-bottom: -50px;
+	}
+	.friends-dashboard {
+		margin-bottom: 20px;
+
+		.friends-dashboard-service-row {
+			display: flex;
+		}
+	
+		.friends-dashboard-service-one-half-column {
+			flex: 1;
+			margin-left: @column-margin;
+		}
+
+		.friends-dashboard-service-one-half-column:first-child {
+		  margin-left: 0;
+		}
+	}	
+	
+	.friends-mobile-white-container {
+		background-color: white;
+		border: solid 1px #e8e8e8;
+		border-radius: 4px;
+		@media (min-width: @bp-larger-than-phablet) {
+			border: unset;
+			background: unset;
+			border-radius: unset;
+		}
+	}
+	
+	.friends-dashboard-balances {
+		.friends-dashboard-balance {
+			//height: 100px;
+			@media (min-width: @bp-larger-than-phablet) {
+			    background-color: white;
+				border: solid 1px #e8e8e8;
+				border-radius: 4px;
+				min-height: 130px;
+			}
+			text-align: center;
+    		padding: 20px 0px;
+			min-height: 75px;
+			button {
+				height: 32px;
+				font-size: 10px;
+				font-weight: 900;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: 0.5px;
+				text-align: center;
+				color: #818592;
+				background-color: #f1f3f5;
+				border-color: #f1f3f5;
+				margin-bottom: 0px;
+			}
+			.friends-short-info-block {
+				display: block;
+				@media (min-width: @bp-larger-than-phablet) {
+					padding: 0px 18px;
+				}
+				.friends-short-info-title {
+					font-weight: normal;
+					font-size: 3vw;
+					@media (min-width: @bp-larger-than-phablet) {
+						font-size: 24px;
+					}
+					line-height: normal;
+					color: #242527;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.friends-short-info-content {
+					font-weight: bold;
+					font-size: 4vw;
+					@media (min-width: @bp-larger-than-phablet) {
+						font-size: 32px;   
+					}
+					line-height: normal; 
+					color: #242527; 
+					text-overflow: ellipsis; 
+					white-space: nowrap; 
+					overflow: hidden;
+				}
+				
+				@media (min-width: @container-width) {
+					& {
+						text-align: left;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+			.friends-short-sec-info-block {
+				display: block;
+				padding: 10px 18px;
+				.friends-short-info-title {
+					font-weight: normal;
+					font-size: 16px;
+					line-height: normal;
+					color: #242527;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.friends-short-info-content {
+					font-weight: bold;   
+					font-size: 24px;   
+					line-height: normal; 
+					color: #242527; 
+					text-overflow: ellipsis; 
+					white-space: nowrap; 
+					overflow: hidden;
+				}
+				
+				@media (min-width: @container-width) {
+					& {
+						text-align: left;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+			@media (min-width: @container-width) {
+				& {
+					text-align: left;
+				}
+			}		
+		}
+	}
+	
+	.friends-payments-balances {
+		.friends-payments-balance {
+			//height: 100px;
+		    background-color: white;
+			border: solid 1px #e8e8e8;
+		    border-radius: 4px;
+			text-align: center;
+    		padding: 20px 0px;
+			min-height: 75px;
+			button {
+				height: 32px;
+				font-size: 10px;
+				font-weight: 900;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: 0.5px;
+				text-align: center;
+				color: #818592;
+				background-color: #f1f3f5;
+				border-color: #f1f3f5;
+				margin-bottom: 0px;
+			}
+			.friends-short-info-block {
+				display: block;
+				padding-top: 5px;
+				@media (min-width: @bp-larger-than-phablet) {
+					padding: 0px 18px;
+				}
+				.friends-short-info-title {
+					font-weight: normal;
+					font-size: 16px;
+					line-height: normal;
+					color: #242527;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.friends-short-info-content {
+					font-weight: bold;
+					font-size: 24px;
+					line-height: normal; 
+					color: #242527; 
+					text-overflow: ellipsis; 
+					white-space: nowrap; 
+					overflow: hidden;
+				}
+				
+				@media (min-width: @container-width) {
+					& {
+						text-align: left;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+			.friends-short-sec-info-block {
+				display: block;
+				padding: 10px 18px;
+				@media (max-width: @bp-larger-than-phablet-less) {
+					padding-left: 0px;
+					padding-right: 0px;
+					margin-left:auto;
+					margin-right: auto;
+				}
+				.friends-short-info-title {
+					font-weight: normal;
+					font-size: 16px;
+					line-height: normal;
+					color: #242527;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.friends-short-info-content {
+					font-weight: bold;   
+					font-size: 24px;   
+					line-height: normal; 
+					color: #242527; 
+					text-overflow: ellipsis; 
+					white-space: nowrap; 
+					overflow: hidden;
+				}
+				
+				@media (min-width: @container-width) {
+					& {
+						text-align: left;
+						vertical-align: middle;
+					}
+				}
+			}
+			@media (min-width: @container-width) {
+				& {
+					text-align: left;
+				}
+			}
+			
+			@media (max-width: @bp-larger-than-phablet-less) {
+				.friends-col-1 {
+					border-bottom: solid 1px #e8e8e8;
+					min-height: 80px;
+					position: relative;
+				}
+				.friends-col-2 {
+					border-right: solid 1px #e8e8e8;
+				}
+				.friends-col-4 {
+					border-top: solid 1px #e8e8e8;
+				}
+			}	
+		}
+	}
+	
+	.friends-services {
+		.friends-dashboard-service {
+			background-color: white;
+			border: solid 1px #e8e8e8;
+		    border-radius: 4px;
+			text-align: left;
+    		padding: 30px;
+			margin-bottom: 20px;
+			h4 {
+				min-height: 34px;
+				font-size: 24px;
+				@media (max-width: @bp-larger-than-phablet-less) {
+					font-size: 5vw;
+				}
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.42;
+				letter-spacing: normal;
+				color: #242527;
+				margin-bottom: 0px;
+			}
+			h6 {
+				min-height: 24px;
+				font-size: 12px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 2;
+				letter-spacing: normal;
+				color: #242527;
+				margin: 0px;
+				text-transform: uppercase;
+			}
+			p {
+				min-height: 24px;
+				font-size: 16px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: normal;
+				color: #242527;
+				&.friends-price-only {
+					margin: 10px 0px;
+				}
+			}
+			header {
+				margin-bottom: 10px;
+				h4 {
+					font-size: 24px;
+					@media (max-width: @bp-larger-than-phablet-less) {
+						font-size: 5vw;
+					}
+					font-weight: 900;
+					min-height: 55px;
+					@media (max-width: @bp-larger-than-phablet-less) {
+						min-height: 22px;
+					}					
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: normal;
+					color: #242527;
+				}
+			}
+			footer {
+				button, a.button {
+					height: 32px;
+					font-size: 10px;
+					font-weight: 900;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: 1.5;
+					letter-spacing: 0.5px;
+					text-align: center;
+					color: #818592;
+					background-color: #f1f3f5;
+					border-color: #f1f3f5;
+					margin: 0px;
+				}
+				a.button {
+					padding-top: 8px;
+				}			
+			}
+			.friends-mobile-progress-container {
+				height: 38px;
+			}
+		}
+	}
+	
+	.friends-icon-container {
+		width: 60px;
+		height: 60px;
+		padding: 0px 0px 0px 25px;
+		display: inline-block;
+		text-align: center;
+		img.friends-icon {
+			margin: auto;
+			vertical-align: middle;
+			&.friends-icon-wallet {
+				padding: 9px 6px;
+			}
+			&.friends-icon-mobile {
+				padding: 0px 7px;
+			}
+			&.friends-icon-bonus {
+				padding: 2px 4px;
+			}
+		}
+		@media (max-width: @container-width-less) {
+			& {
+				display: inline-block;
+				padding: 0px;
+			}
+		}
+	}
+	
+	.friends-payments-balances {
+		.friends-icon-container {
+			@media (max-width: @bp-larger-than-phablet-less){
+				position: absolute;
+	    		left: 10px;
+			}
+		}
+	}
+	
+	h3 {
+		.block-contract{
+			margin-left: 5px;
+		}
+		a.button{
+			padding: 7px 10px;
+			-webkit-transition: 0.6s;
+			-moz-transition: 0.6s;
+			-o-transition: 0.6s;
+			transition: 0.6s;
+		}
+		color: #4db2ff;
+		font-size: 24px;
+		font-weight: 900;
+		line-height: normal;
+		font-style: normal;
+		font-stretch: normal;
+		letter-spacing: normal;
+		margin-top: 25px;
+	}
+	
+	.friends-status {
+		min-height: 40px;
+  		font-size: 12px;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			min-height: 15px;
+			font-size: 9px;
+			font-size: 2.1vw;
+		}
+  		font-weight: 900;
+		line-height: 1.6;
+		text-transform: uppercase;
+		&.friends-status-active {
+			color: #00c56e;
+		}
+		&.friends-status-inactive {
+			color: #4db2ff;
+		}
+	}
+	
+	.friends-align-right {
+		text-align: right;
+	}
+	
+	.friends-align-center {
+		text-align: center;
+	}
+	
+	.friends-align-left {
+		text-align: left;
+	}
+	
+	.friends-align-right-m {
+		@media (max-width: @bp-larger-than-phablet-less) {
+			text-align: right;
+		}
+	}
+	
+	.friends-align-center-m {
+		@media (max-width: @bp-larger-than-phablet-less) {
+			text-align: center;
+		}
+	}
+	
+	.friends-align-left-m {
+		@media (max-width: @bp-larger-than-phablet-less) {
+			text-align: left;
+		}
+	}
+	
+	.friends-align-right-d {
+		@media (min-width: @bp-larger-than-phablet) {
+			text-align: right;
+		}
+	}
+	
+	.friends-align-center-d {
+		@media (min-width: @bp-larger-than-phablet) {
+			text-align: center;
+		}
+	}
+	
+	.friends-align-left-d {
+		@media (min-width: @bp-larger-than-phablet) {
+			text-align: left;
+		}
+	}
+	
+	.friends-center-mobile {
+		@media (max-width: @container-width-less) {
+			& {
+				text-align: center;
+			}
+		}
+	}
+	
+	.friends-column-with-rdelimiter {
+		border-right: solid 1px #e8e8e8;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			& {
+				border-right: none;
+			}
+		}
+	}
+	
+	@media (max-width: @bp-larger-than-phablet-less) {
+		.friends-mobile-margined-bottom {
+			margin-bottom: 20px;
+		}
+	}
+	
+	::-webkit-progress-bar {
+	    background: #d8d8d8;
+	}
+	::-webkit-progress-value {
+	    background: #818592;
+	}
+	::-moz-progress-bar {
+	    background: #818592;
+	}
+	progress {
+	    display: block;
+	    color: #818592;
+	    background: #d8d8d8;
+	    border: 1px solid #d8d8d8;
+	    border-radius: 3px;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    height: 6px;
+	    line-height: 21px;
+	    font-size: 15px;
+		margin: 0px;
+	    text-align: center;
+		width: 100%;
+	}
+	
+	.friends-container-white {
+		//Prevent border collapse
+		padding: 0.05px;
+		background-color: white;
+	}
+	.friends-bordered-top-container {
+		border-top: solid 1px #f1f3f5;
+	}
+	
+	.friends-gray-container {
+		//Prevent border collapse
+		padding: 0.05px;
+		background-color: #f1f3f5;
+	}
+	
+	.friends-gray-container-round-cornered {
+		//Prevent border collapse
+		padding: 0.05px;
+		background-color: #f1f3f5;
+		border-radius: 4px;
+		border: solid 1px #f1f3f5;
+	}
+	
+	.friends-container-bottom-fem {
+		margin-bottom: -75px;
+	}
+	
+	.friends-container-bottom-fem2 {
+		margin-bottom: -150px;
+	}
+	
+	.friends-container-top-ml {
+		padding-top: 60px;
+	}
+	
+	.friends-container-top-ml2 {
+		height: 200px;
+	}
+	
+	.friends-margined-row {
+		margin: 20px 0px;
+	}
+	
+	.friends-background-payments-header {
+		height: 240px;
+    	width: 100%;
+	}
+	
+	.friends-aside {
+		//Prevent border collapse
+		padding: 0.05px;
+		margin-bottom: 90px;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			margin-bottom: 40px;		
+		}
+	}
+	
+	.friends-gray-bordered-container {
+		border-radius: 4px;
+		border: solid 1px #e8e8e8;
+		background-color: white;
+	}
+	
+	.friends-aside-balance-container {
+		padding: 60px 60px 20px 60px;
+		@media (min-width: @bp-larger-than-phablet)
+			and (max-width: @container-width) {
+			margin: 10px;
+		}
+		@media (max-width: @bp-larger-than-phablet-less) {
+			padding: 15px 20px 10px 20px;
+		}
+		input[type="text"],
+		input[type="password"],
+		button[type="submit"] {
+			width: @full-width;
+			height: 67px;
+		}
+		::-webkit-input-placeholder {
+			text-align: left;
+		}
+		::-moz-placeholder {
+			text-align: left;
+		}
+		:-moz-placeholder {
+			text-align: left;
+		}
+		:-ms-input-placeholder {  
+			text-align: left !important;
+		}
+		::placeholder{
+			text-align: left;
+		}
+	}
+	
+	.friends-checkbox-container {
+		input[type="checkbox"] {
+			margin-top: 10px;
+			border-radius: 4px;
+			border: solid 2px #818592;
+			background-color: #ffffff;
+			margin-top: 10px;
+		}
+		label {
+			display: inline-block;
+			height: 15px;
+			font-size: 10px;
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.5;
+			letter-spacing: 1px;
+			color: #818592;
+			text-transform: uppercase;
+			vertical-align: middle;
+			position: absolute;
+			margin-top: 9px;
+			margin-left: 10px;
+		}
+	}
+	
+	.friends-auto-payment-link {
+		height: 15px;
+		font-size: 16px;
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #4db2ff;
+		text-transform: uppercase;
+	}
+	
+	.friends-selfcare-footer {
+		border-top: solid 1px #e8e8e8;
+		.friends-container-white {
+			padding: 65px 0px;
+			color: #818592;
+		}
+	}
+	
+	.friends-img-logout {
+		position: relative;
+		top: -2px;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			& {
+				top: 3px;
+			}
+		}
+	}
+	
+	.friends-payment-images {
+		@media (min-width: @bp-larger-than-phablet) {
+			margin-top: 25px;
+		}
+		margin-bottom: 2rem;
+		display: inline-block;
+		img {
+			padding: 0px 11px;
+			vertical-align: middle;
+		}
+	}
+	
+	.friends-qr-image {
+		padding-top: 30px;
+		vertical-align: middle;
+	}
+	
+	.friends-payments-link-container {
+		padding: 43px;
+		text-align: center;
+		a {
+			vertical-align: middle;
+			font-size: 16px;
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: 1px;
+			color: #4db2ff;
+			text-transform: uppercase;
+		}
+	}
+	.friends-payments-btn-link {
+		display: block;
+		padding: 43px;
+		text-align: center;
+		border-radius: 4px;
+		background-color: #f1f3f5;
+		font-size: 16px;
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #818592;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: solid 1px #f1f3f5;
+		&:hover {
+			border: solid 1px #a8a8a8;
+		}
+	}
+	.friends-settings-btn-link {
+		display: block;
+		padding: 43px;
+		text-align: center;
+		border-radius: 4px;
+		background-color: #f1f3f5;
+		font-size: 16px;
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #818592;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: solid 1px #f1f3f5;
+		&:hover {
+			border: solid 1px #a8a8a8;
+		}
+	}
+	
+	.friends-payments-transfer {
+		display: block;
+		text-decoration: none;
+		border-radius: 4px;
+		border: solid 1px #e8e8e8;
+		background-color: #ffffff;
+		margin-bottom: 20px;
+		min-height: 245px;
+		&:hover {
+			border: solid 1px #a8a8a8;
+		}
+		header {
+			text-align: center;
+			height: 100px;
+			img {
+				vertical-align: middle;
+			}
+		}
+		main {
+			text-align: center;
+			padding: 30px 10px;
+			font-size: 16px;
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.5;
+			letter-spacing: normal;
+			color: #242527;
+			text-transform: uppercase;
+		}
+		footer {
+			text-align: center;
+		}
+	}
+	
+	.friends-toggle {
+		> input[type="checkbox"] {
+			position: absolute;
+	        left: -9999px;
+		}
+		> input[type=checkbox] ~ main {
+            display: none;
+		}
+		> label {
+			display: block;
+			font-size: 14px;
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: 1px;
+			color: #818592;
+	        cursor: pointer;
+	        user-select: none;
+			padding: 25px 30px;
+			text-transform: uppercase;
+			margin-bottom: 0px;
+			background-color: #f1f3f5;
+			border-radius: 4px;
+			border: solid 1px #f1f3f5;
+			.friends-toggle-chevron:before {
+				content: "\0FE40";
+				font-size: 22px;
+			}
+		}
+		input[type=checkbox]:checked ~ main {
+            display: block;
+        }
+		input[type=checkbox]:checked ~ label {
+			background-color: unset;
+			border-radius: unset;
+			border: unset;
+            .friends-toggle-chevron:before {
+				content: "\0FE3F";
+			}
+        }
+	}
+	
+	.friends-details-filter-dates {
+		.date-wrapper {
+			display: inline-block;
+			label {
+				display: inline-block;
+				padding-right: 20px;
+				min-width: 20px;
+				@media (max-width: @bp-larger-than-phablet-less) {
+					& {
+						width: 15%;
+						padding-right: 0px;
+						display: inline-block;
+					}
+				}
+			}
+			input {
+				width: 200px;
+				text-align: center;
+				color: #818592;
+				@media (max-width: @bp-larger-than-phablet-less) {
+					& {
+						width: 70%;
+						display: inline-block;
+						font-size: 4vw;
+					}
+				}
+			}
+		}
+	}
+	
+	.friends-calendar-btn {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background-image: url(../../assets/img/icon-calendar.png);
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		margin-left: 16px;
+		margin-right: 16px;
+		position: relative;
+    	top: 5px;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			& {
+				margin: 0px;
+				float: right;
+				margin-top: 25px;
+			}
+		}
+	}
+	
+	.hide-text {
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	.u-header-text {
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.5;
+		letter-spacing: normal;
+		color: #242527;
+		text-transform: uppercase;
+	}
+	
+	.u-header-borderless-text {
+		font-size: 12px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		letter-spacing: normal;
+		color: #242527;
+		border: none;
+		text-transform: uppercase;
+	}
+	
+	.friends-table {
+		th:first-child,
+		td:first-child {
+		  padding-left: 1em;
+		}
+		border-collapse: unset;
+		
+		@media (max-width: @bp-larger-than-phablet-less) {
+			& {
+				border-collapse: collapse;
+			}
+			thead {
+				display: none;
+			}
+			th, td {
+				border-bottom: unset;
+				display: inline-block;
+			}			
+			tr {
+				border-bottom: 1px solid #e1e1e1;
+			}
+			.friends-details-col-date {
+				float: left;
+			}
+			.friends-details-col-credit {
+				float: right;
+			}
+			.friends-details-col-debit {
+				float: right;
+				&:after {
+				    content:"\a";
+				    white-space: pre;
+				}
+			}
+			.friends-details-col-source {
+				float: right;
+				clear: left;
+				
+			}
+			.friends-details-col-service-type {
+				float: left;
+			}
+			.friends-col-void {
+				padding: 0px;
+			}
+		}
+	}
+	
+	.friends-table-headless {
+		th:first-child,
+		td:first-child {
+		  padding-left: 15px;
+		}
+		//border-collapse: unset;
+		th, td {
+			border: none;
+		}
+		tr {
+			@media (max-width: @bp-larger-than-phablet-less) {
+				& {
+					border-collapse: collapse;
+					margin-bottom: 3px;
+					display: block;
+				}
+			}
+		}
+		tbody {
+			tr {
+				background-color: white;
+				border: 1px solid #e1e1e1;
+					border-radius: 4px;
+			}
+		}
+		
+		@media (max-width: @bp-larger-than-phablet-less) {
+			& {
+				border-collapse: collapse;
+			}
+			thead {
+				display: none;
+			}
+			th, td {
+				display: block;
+    			width: 100%;
+			}			
+			tr {
+				border-bottom: 1px solid #e1e1e1;
+			}
+			.friends-details-col-date {
+				float: left;
+			}
+			.friends-details-col-credit {
+				float: right;
+			}
+			.friends-details-col-debit {
+				float: right;
+				&:after {
+				    content:"\a";
+				    white-space: pre;
+				}
+			}
+			.friends-details-col-source {
+				float: right;
+				clear: left;
+				
+			}
+			.friends-details-col-service-type {
+				float: left;
+			}
+			.friends-col-void {
+				padding: 0px;
+			}
+		}
+	}
+	
+	.friends-details-filter-block {
+		margin-bottom: 20px;
+	}
+	
+	.friends-settings-container {
+		.friends-setting-block {
+			background-color: white;
+			border: solid 1px #e8e8e8;
+		    border-radius: 4px;
+			text-align: left;
+    		padding: 30px;
+			margin-bottom: 20px;
+			h4 {
+				min-height: 34px;
+				font-size: 24px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.42;
+				letter-spacing: normal;
+				color: #242527;
+				margin-bottom: 0px;
+			}
+			h6 {
+				min-height: 24px;
+				font-size: 12px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 2;
+				letter-spacing: normal;
+				color: #242527;
+				margin: 0px;
+				text-transform: uppercase;
+			}
+			p {
+				min-height: 24px;
+				font-size: 16px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: normal;
+				color: #242527;
+				&.friends-price-only {
+					margin: 10px 0px;
+				}
+			}
+			header {
+				margin-bottom: 10px;
+				min-height: 30px;
+				h4 {
+					font-size: 24px;
+					font-weight: 900;
+					min-height: 22px;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: normal;
+					color: #242527;
+				}
+			}
+			main {
+				@media (min-width: @bp-larger-than-phablet) {
+					min-height: 40px;
+				}
+				font-size: 20px;
+				font-weight: normal;
+				font-stretch: normal;
+				font-style: normal;
+				letter-spacing: normal;
+				color: #242527;
+				img {
+					vertical-align: middle;
+				}
+			}
+			footer {
+				min-height: 30px;
+				button, a.button {
+					height: 32px;
+					font-size: 10px;
+					font-weight: 900;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: 1.5;
+					letter-spacing: 0.5px;
+					text-align: center;
+					color: #818592;
+					background-color: #f1f3f5;
+					border-color: #f1f3f5;
+					margin-top: 10px;
+					margin-right: 5px;
+					margin-left: 0px;
+					margin-bottom: 0px;
+					@media (max-width: @bp-larger-than-phablet-less) {
+						margin-top: 10px;	
+						margin-right: 0px;
+					}
+				}
+				a.button {
+					padding-top: 8px;
+				}			
+			}
+			.friends-mobile-progress-container {
+				height: 38px;
+			}
+		}
+
+		.friends-setting-block-row1 {
+			.friends-setting-block();
+			@media (min-width: @bp-larger-than-phablet) {
+				min-height: 160px;
+			}
+		}
+
+		.friends-setting-block-row2 {
+			.friends-setting-block();
+			@media (min-width: @bp-larger-than-phablet) {
+				min-height: 170px;
+			}
+		}
+
+		.friends-setting-block-row3 {
+			.friends-setting-block();
+			/*@media (min-width: @bp-larger-than-phablet) {
+				min-height: 125px;
+			}*/
+		}
+	}
+	
+	.friends-notice-text {
+		font-size: 10px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: italic;
+		line-height: 1.3;
+		letter-spacing: normal;
+		color: #818592;
+	}
+	
+	a.friends-button-logout {
+		vertical-align: top;
+	    top: 6px;
+	    position: relative;
+		@media (max-width: @bp-larger-than-phablet-less) {
+			margin-top: 3px;	
+		}
+	}
+	
+	.friends-alert-dialog-modal-content {
+	    z-index: 105;
+	    margin: auto;
+	    background-color: #fff;
+	    position: relative;
+	    overflow: hidden;
+	    padding: 0;
+	    outline: 0;
+	    width: 420px;
+	    border-radius: 1px;
+	    top: 30%;
+	    
+	    .modal-header, .modal-body, .modal-footer { 
+	    	text-align: center;	   	    
+	    }
+	}
+	@media (max-width: 700px) {
+		.friends-alert-dialog-modal-content {
+			top: 20%;
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}

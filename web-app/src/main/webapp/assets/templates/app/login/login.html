@@ -1,0 +1,50 @@
+<h1>{{= globalize.formatMessage("website.loginPageTitle") }}</h1>
+
+<form>
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                <input type="text" name="email" placeholder="{{= globalize.formatMessage("website.login") }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group">
+        <div class="row">
+            <div class="offset-by-three six columns friends-has-feedback">
+                <input type="password" name="password" placeholder="{{= globalize.formatMessage("website.passwordProperty") }}">
+                <span class="friends-sprite friends-img-password-show"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group friends-form-group-alert-only">
+        <div class="row">
+            <div id="error-alert" class="offset-by-three six columns friends-error-text"></div>
+        </div>
+    </div>
+
+    <div class="friends-form-group friends-form-group-last">
+        <div class="row friends-row-main-action">
+            <div class="offset-by-three six columns">
+                <button type="submit" class="button-primary">{{= globalize.formatMessage("website.buttonEnter") }}</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div class="friends-register-container">
+    <div class="row">
+        <div class="twelve columns">
+            <a href="#registration" class="friends-cancel-link">{{= globalize.formatMessage("website.getRegistered") }}</a>
+        </div>
+    </div>
+</div>
